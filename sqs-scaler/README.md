@@ -34,3 +34,15 @@ Output IRSA:
 2023-12-18 08:00:10 [ℹ]  serviceaccount "keda/keda-operator" already exists
 2023-12-18 08:00:10 [ℹ]  updated serviceaccount "keda/keda-operator"
 ```
+
+Test (sqs send-message):
+
+```sh
+for i in `seq 30`; do
+  aws sqs send-message --queue-url 'https://sqs.us-east-2.amazonaws.com/310240692520/keda-queue' \
+    --message-body "XXXX" \
+    --region us-east-2 \
+    --no-cli-pager \
+    --output text
+done
+```
