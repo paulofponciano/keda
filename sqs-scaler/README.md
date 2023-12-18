@@ -10,9 +10,10 @@ Service account (IRSA) for Keda:
 ```sh
 eksctl create iamserviceaccount --name keda-operator \
   --namespace keda \
-  --cluster poc-eks \
+  --cluster pegasus \
   --attach-policy-arn arn:aws:iam::310240692520:policy/keda-sqs \
-  --region us-east-1 \
+  --region us-east-2 \
   --profile default \
+  --override-existing-serviceaccounts \
   --approve
 ```
