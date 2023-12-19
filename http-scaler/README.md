@@ -8,3 +8,7 @@ helm install keda kedacore/keda --namespace keda \
   --create-namespace
 helm install http-add-on kedacore/keda-add-ons-http --namespace keda
 ```
+
+docs/ref/v0.2.0:
+
+https://github.com/kedacore/http-add-on/blob/main/docs/ref/v0.2.0/http_scaled_object.md
