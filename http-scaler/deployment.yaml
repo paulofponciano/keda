@@ -45,7 +45,7 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - "pegasus-staging-nlb-ingress-5d608c806912d9f0.elb.us-east-2.amazonaws.com"
+    - "demo-ingress.pauloponciano.digital"
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
@@ -53,7 +53,7 @@ metadata:
   name: nginx
 spec:
   hosts:
-  - "pegasus-staging-nlb-ingress-5d608c806912d9f0.elb.us-east-2.amazonaws.com"
+  - "demo-ingress.pauloponciano.digital"
   gateways:
   - nginx-gateway
   http:
