@@ -27,9 +27,9 @@ eksctl create iamserviceaccount --name keda-operator \
 
 ```sh
 for i in `seq 35`; do
-  aws sqs send-message --queue-url 'https://sqs.us-east-2.amazonaws.com/310240692520/keda-queue' \
+  aws sqs send-message --queue-url 'https://sqs.REGION.amazonaws.com/ACCOUNTID/keda-queue' \
     --message-body "testmessage" \
-    --region us-east-2 \
+    --region REGION \
     --no-cli-pager \
     --output text
 done
