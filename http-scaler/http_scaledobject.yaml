@@ -1,0 +1,14 @@
+kind: HTTPScaledObject
+apiVersion: http.keda.sh/v1alpha1
+metadata:
+    name: nginx-http-scaledobject
+spec:
+    host: pegasus-staging-nlb-ingress-5d608c806912d9f0.elb.us-east-2.amazonaws.com
+    targetPendingRequests: 1
+    scaleTargetRef:
+        deployment: nginx-deployment
+        service: nginx-service
+        port: 80
+    replicas:
+        min: 0
+        max: 3
