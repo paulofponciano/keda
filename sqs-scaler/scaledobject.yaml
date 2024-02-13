@@ -14,6 +14,6 @@ spec:
   - type: aws-sqs-queue
     metadata:
       queueURL: https://sqs.REGION.amazonaws.com/ACCOUNTID/keda-queue
-      queueLength: "10"
+      queueLength: "15"
       awsRegion: "REGION"
       identityOwner: operator

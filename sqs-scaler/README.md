@@ -1,3 +1,9 @@
+## Create SQS queue:
+
+```sh
+aws sqs create-queue --queue-name keda-sqs --region REGION
+```
+
 ## AWS IAM Policy:
 
 ```sh
