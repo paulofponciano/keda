@@ -1,8 +1,8 @@
-KEDA | Kubernetes Event-driven Autoscaling
+# KEDA | Kubernetes Event-driven Autoscaling
 
 https://keda.sh/
 
-Keda deploy with Helm:
+## Keda deploy with Helm:
 
 ```sh
 helm repo add kedacore https://kedacore.github.io/charts

@@ -1,4 +1,4 @@
-HTTP add-on:
+## HTTP add-on:
 
 ```sh
 helm repo add kedacore https://kedacore.github.io/charts

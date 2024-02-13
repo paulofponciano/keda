@@ -33,7 +33,7 @@ spec:
   triggers:
   - type: aws-sqs-queue
     metadata:
-      queueURL: https://sqs.us-east-2.amazonaws.com/310240692520/keda-queue
+      queueURL: https://sqs.REGION.amazonaws.com/ACCOUNTID/keda-queue
       queueLength: "10"
-      awsRegion: "us-east-2"
+      awsRegion: "REGION"
       identityOwner: operator

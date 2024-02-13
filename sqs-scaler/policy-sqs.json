@@ -4,7 +4,7 @@
         {
             "Effect": "Allow",
             "Action": "sqs:GetQueueAttributes",
-            "Resource": "arn:aws:sqs:us-east-2:310240692520:keda-queue"
+            "Resource": "arn:aws:sqs:REGION:ACCOUNTID:keda-queue"
         }
     ]
 }
