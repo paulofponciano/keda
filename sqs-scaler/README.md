@@ -16,7 +16,7 @@ aws iam create-policy --policy-name keda-sqs-policy \
 ```sh
 eksctl create iamserviceaccount --name keda-operator \
   --namespace keda \
-  --cluster CLUSTER \
+  --cluster pegasus \
   --attach-policy-arn arn:aws:iam::ACCOUNTID:policy/keda-sqs-policy \
   --region REGION \
   --profile default \
@@ -26,10 +26,10 @@ eksctl create iamserviceaccount --name keda-operator \
 ## Test (sqs send-message):
 
 ```sh
-for i in `seq 30`; do
-  aws sqs send-message --queue-url 'https://sqs.REGION.amazonaws.com/ACCOUNTID/keda-queue' \
+for i in `seq 35`; do
+  aws sqs send-message --queue-url 'https://sqs.us-east-2.amazonaws.com/310240692520/keda-queue' \
     --message-body "testmessage" \
-    --region REGION \
+    --region us-east-2 \
     --no-cli-pager \
     --output text
 done

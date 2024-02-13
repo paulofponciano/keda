@@ -3,11 +3,12 @@ apiVersion: http.keda.sh/v1alpha1
 metadata:
     name: nginx-http-scaledobject
 spec:
-    host: demo-ingress.pauloponciano.digital
+    hosts:
+    - demo-ingress.pauloponciano.digital
     targetPendingRequests: 1
     scaleTargetRef:
-        deployment: nginx-deployment
-        service: nginx-service
+        deployment: nginx-deployment-2
+        service: nginx-service-2
         port: 80
     replicas:
         min: 0
