@@ -2,8 +2,8 @@
 
 <p align="center"><img src="https://github.com/kedacore/keda/blob/main/images/logos/keda-icon.svg" width="250" alt="keda"></p>
 
-https://keda.sh/
-https://github.com/kedacore/keda
+- https://keda.sh/
+- https://github.com/kedacore/keda
 
 ## Keda deploy with Helm:
 
