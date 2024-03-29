@@ -1,5 +1,8 @@
 ## HTTP add-on:
 
+> [!NOTE]
+> Para executar esse passo do addon http, primeiro faça o deploy do keda descrito em [Keda-deploy-with-Helm](../README.md#Keda-deploy-with-Helm). No arquivo 'http_scaledobject.yaml', altere para o endereço do ingress que o Keda precisa interceptar.
+
 ```sh
 helm repo add kedacore https://kedacore.github.io/charts
 helm repo update

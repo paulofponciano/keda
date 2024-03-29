@@ -1,3 +1,6 @@
+> [!NOTE]
+> Não esqueça de substituir os valores de REGION, ACCOUNTID, CLUSTER na 'policy-sqs.json' e no 'scaledobject.yaml' e também nos comandos.
+
 ## Create SQS queue:
 
 ```sh
@@ -16,7 +19,7 @@ aws iam create-policy --policy-name keda-sqs-policy \
 ```sh
 eksctl create iamserviceaccount --name keda-operator \
   --namespace keda \
-  --cluster pegasus \
+  --cluster CLUSTER \
   --attach-policy-arn arn:aws:iam::ACCOUNTID:policy/keda-sqs-policy \
   --region REGION \
   --profile default \
